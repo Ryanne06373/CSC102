@@ -1,0 +1,37 @@
+/* this is a css comment - this is the only comment style
+CSS syntax:
+
+selector{
+    property: value;
+    property: value;
+}
+
+selector: 3 options: HTML tag/element, ID of an element (#id), Custom class - stars . (.classname)
+
+just use ecternal css files in this class
+*/
+/* body will apply to the whole page */
+body{
+    background-color: beige;
+    color: black;
+}
+/* header will just apply to the section with the title */
+header{
+    text-align: center;
+}
+nav{
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+#uat-logo.png{
+    margin-right: 200px;
+    margin-top: 200px;
+    margin-left: 200px;
+}
