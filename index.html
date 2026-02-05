@@ -30,12 +30,95 @@
         </p>
     </div>
 
+    <h2>Play my dice game</h2>
+
+    <button onclick="playDiceGame();">Play Game</button>
+    <div id="divMessage">Waiting for the game start</div>
+    <div id="divRoll1"></div>
+    <div id="divRoll2"></div>
+    <div id="divSum"></div>
+
+    <!-- Link to the game logic -->
+     <script src="script.js"></script>
+
     <h2>There are 4 pillars of programming</h2>
 
     <h3>Variables</h3>
-    <h3>Decision Logic</h3>
+
+    <!-- The script tags they specify that we are now coding with JavaScript - a whole new set of rules apply in JavaScript -->
+    <script>
+        // This is a single-line JavaScript comment
+
+        /*
+            This is a multi-line Javascript comment
+        */
+       
+        // a variable stores a piece of information
+        // variables should have descriptive names
+
+        // use descriptive variable names, such as firstName
+        // let is the best way to create a JavaScript variable
+
+        let firstName = "Ryanne";
+
+        // var and let are basically equivalent for the purposes of this class - but use let cause its better
+        var lastName = "Kinnaman";
+
+
+    </script>
+
     <h3>Functions</h3>
+
+    <script>
+        // lets talk about functions - fuctions are a way to organize chunks of code; functions also allow us to write code 1 time and reuse it as many times as we need to
+        // when creating a function in JavaScript, use the keyword function to let the interpreter know that you are creating a resuable chunk of code
+        // we create a descriptive name for what our function will do; most of the time our function names should include a verb ; start function names with a letter, you can use numbers and _
+        // camelCase or snake_case for naming styles - use whichever one you want, but stay consistent
+        // after the function name, use parentheses ( ) whether or not you are passing values into the function
+        // the function code must be placed within curly braces { }
+        function addNumbers(){
+            // create 2 variables so we can add them together
+            let number1 = 5; // we are hard-coding the value of 5 here
+            let number2 = 8;
+
+            //create another varible to hold the sum
+            let sum = number1 + number2;
+
+            // write out the sum to the console
+            // to concatenate (add text together), you can use + or ,
+            console.log("The sum is: ", sum)
+        }
+
+        // this line of code, calls the function so we can test it
+        addNumbers();
+    </script>
+
+    <h3>Decision Logic (if/else)</h3>
+
+    <script>    
+        // when testing an if statement, make sure to use == (equality) instead of = (assignment: this will change the value of your variable, which you probably dont want)
+        // in an if chunk of code, you will have 1 and only 1 if statement, you can have as many else if as needed, and optionally, 1 else statment
+        // && is and - both conditions must evaluate to true
+        // || is or - only 1 condtion must evaluate to true
+        if (firstName == "Ryanne" || lastName == "Kinnaman"){
+            // since the value in firstName is Ryanne, this code will run
+            console.log("Ryanne is here");
+        }
+        else if ( firstName == "Rae2"){
+            console.log("Ryanne is here");
+        }
+        // else is the catch-all so when the if statement evaluates to false, the else will run
+        else{
+            console.log("Ryanne is not here")
+        }
+    </script>
+
+   
     <h3>Loops</h3>
+
+
+    
+
 </body>
 <!-- the closing html tag should be at the very end of the file -->
 </html> <!-- closing tag -->
