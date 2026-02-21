@@ -45,3 +45,52 @@
             // returing / passing back the random number
             return number;
         }
+
+        // functions from strings.html
+
+         // this function will validate the user input based on the requirement of the client (assignment requirement)
+        function validate(){
+            // first name variable
+            let firstName = document.getElementById("txtFirstName").value;
+
+            // show the first name in the console
+            console.log("firstName=" + firstName);
+
+            // last name variable
+            let lastName = document.getElementById("txtLastName").value;
+
+            // show the last name in the console
+            console.log("lastName=" + lastName);
+
+            // Zip code variable
+            let zip = document.getElementById("txtZip").value;
+
+            // show the sip in the console
+            console.log("zip=" + zip);
+
+            // create a varibale to hold the first name + " " + last name
+            let fullName = firstName + " " + lastName;
+
+            console.log("fullName=" + fullName);
+
+            // create a variable to hold the message we will show to the user
+            let message = "";
+
+            // we need to make sure the full name does not exceed 20 characters
+            if (fullName.length == 1 || fullName.length > 20){
+                message = "Please enter a name that is less than 20 characters.";
+            }
+            // the zip code can only have 5 characters
+            else if (zip.length != 5){
+                message = "Please enter a 5 digit zip code.";
+            }
+            // otherwise, the user has entered everything correctly, and they get message
+            else{
+                message = "Thank you for your submittion!"
+            }
+
+            console.log("message=" + message);
+
+            //display the message on the associate div
+            document.getElementById("divMessage").textContent = message;
+        }
