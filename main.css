@@ -35,3 +35,11 @@ footer{
     margin-top: 200px;
     margin-left: 200px;
 }
+#bikeImage{
+    /* this is necessary for your image to move around, position absolute */
+    position: absolute;
+    left: 200px;
+    top: 200px;
+
+}
+

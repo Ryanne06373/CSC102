@@ -94,3 +94,51 @@
             //display the message on the associate div
             document.getElementById("divMessage").textContent = message;
         }
+
+
+
+        // the code to move the image around
+
+        // create a variable to track the current interval id (returned from the setInterval function)
+    let intervalId = 0;
+
+    // create the function to move the image
+    function startImageMove(){
+        // we are creating a variable that is a shortcut/nickname for our HTML image
+        let bikeImage = document.getElementById("bikeImage");
+
+        // setInterval allows us to repeatedly run code
+        // function(){} is an anonymous function - a way to run a chunk of code 1 time as a function argument
+        intervalId = setInterval(function(){
+            let topCord = getRandomPixel();
+            let leftCord = getRandomPixel();
+
+            bikeImage.style.left = leftCord + "px";
+            bikeImage.style.top = topCord + "px";
+
+        }, 1000); // 1000 miliseconds = 1 second
+
+        // enable the stop button == can click on stop button
+        document.getElementById("btnStop").disabled = false;
+
+        // disable the start button == cannot click on start button
+        document.getElementById("btnStart").disabled = true;
+    }
+
+    // creat the function that stops the image from moving
+    function stopImageMove(){
+        // call a built in JavaScript function that stops the setInterval from running
+        clearInterval(intervalId);
+
+        // disable the stop button == cannot click on stop button
+        document.getElementById("btnStop").disabled = true;
+
+        // enable the start button == can click on start button
+        document.getElementById("btnStart").disabled = false;
+    }
+
+    // build a funtion to get a random number
+    function getRandomPixel(){
+        // im picking 800 as the max number - adjust accordingly based on your screen size
+        return Math.floor(Math.random() * 800);
+    }
