@@ -142,3 +142,59 @@
         // im picking 800 as the max number - adjust accordingly based on your screen size
         return Math.floor(Math.random() * 800);
     }
+
+// code for palidrome
+ // create the checkPalin function
+        function checkPalin(event){
+            // prevent the form from submitting (so the page does not refresh)
+            event.preventDefault();
+
+            // creat a variable to store the word that the user entered
+            let wordToTest = document.getElementById("txtWord").value;
+
+            console.log("wordToTest=" + wordToTest);
+
+            // call the function to test it
+            // TODO: print out the result to the user
+            let bPalin = isPalin(wordToTest);
+
+            // create a shortcut to the message div
+            let divMessage = document.getElementById("divMessage");
+
+            // create a message for the user base on the value of bPalin
+            if(bPalin){  // if(bPalin) is equivalent to if (bPalin == true)
+                // show the user a message
+                divMessage.textContent = "The phrase is a palindrome!"
+            }
+            else{
+                divMessage.textContent = "The phrase is NOT a palindrome!"
+            }
+        }
+
+        // create a function to test to see if a string is the same backwards and forwards
+        function isPalin(strToTest){
+            // i want to conver the string to all lowercase so that it is a more fair compairison
+            strToTest = strToTest.toLowerCase();
+
+            console.log("strToTest=" + strToTest);
+
+            // create a new variable so can keep the original string for testing
+            let strReverse = strToTest;
+
+            // convert the reverse string to an array, we will reverse the contents 
+            // so test would become test and then convert the array back to string
+            strReverse = strReverse.split("").reverse().join("");
+
+            console.log("strReverse=" + strReverse); 
+
+            // compare the original string with the reversed string
+            // if they match, this function will return true. otherwise it will return false
+            if (strReverse == strToTest){
+                return true;
+            }
+            // else{ return false }
+            
+                // if we get to this line, it must not have been a palindrome, so return false
+                return false;
+            
+        }
